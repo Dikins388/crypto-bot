@@ -108,11 +108,11 @@ async def auto_check(context: ContextTypes.DEFAULT_TYPE):
 
 
 def main():
-    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    token = os.getenv("BOT_TOKEN") 
 
     if not token:
         raise ValueError(
-            "Missing TELEGRAM_BOT_TOKEN environment variable"
+    "Missing BOT_TOKEN environment variable"
         )
 
     app = Application.builder().token(token).build()
